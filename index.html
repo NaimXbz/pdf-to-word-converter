@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI-Powered PDF to Word Converter</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        @keyframes borderRGB {
+            0% { border-color: #00ff88; box-shadow: 0 0 10px #00ff88; }
+            33% { border-color: #00b4ff; box-shadow: 0 0 10px #00b4ff; }
+            66% { border-color: #ff00e4; box-shadow: 0 0 10px #ff00e4; }
+            100% { border-color: #00ff88; box-shadow: 0 0 10px #00ff88; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="#" class="active">Home</a></li>
+                    <li><a href="#">Features</a></li>
+                    <li><a href="#">Image Compressor</a></li>
+                    <li><a href="#">Pic Resize</a></li>
+                    <li><a href="#">All Tools</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="hero">
+            <h1>AI-Powered PDF to Word Converter <span>by Naim Xbz</span></h1>
+            <p class="subtitle">Instantly convert your PDF documents to editable Word files with AI technology!</p>
+            <a href="https://www.linkedin.com/in/naimxbz/" class="btn btn-contact">Contact with Naim Xbz</a>
+        </section>
+
+        <section class="upload-section">
+            <h2>Upload Your PDF</h2>
+            <p class="upload-subtitle">Choose a PDF file to convert to Word document</p>
+            
+            <div class="upload-area" id="uploadArea">
+                <div class="upload-content">
+                    <i class="fas fa-file-pdf"></i>
+                    <p>Drag and drop your PDF here, or click to select a file</p>
+                    <button class="btn btn-select" id="selectBtn">Select PDF</button>
+                </div>
+                <input type="file" id="fileInput" accept=".pdf">
+            </div>
+
+            <div class="conversion-options">
+                <div class="option-row">
+                    <label class="option-label">
+                        <i class="fas fa-robot"></i>
+                        <span>Enable AI OCR (for scanned PDFs)</span>
+                    </label>
+                    <label class="toggle-switch">
+                        <input type="checkbox" id="ocrToggle" checked>
+                        <span class="toggle-slider"></span>
+                    </label>
+                </div>
+                <div class="option-row">
+                    <label class="option-label">
+                        <i class="fas fa-language"></i>
+                        <span>Language</span>
+                    </label>
+                    <select id="languageSelect" class="language-select">
+                        <option value="auto">Auto Detect</option>
+                        <option value="eng">English</option>
+                        <option value="ben">Bengali</option>
+                        <option value="hin">Hindi</option>
+                    </select>
+                </div>
+            </div>
+
+            <button class="btn btn-process" id="processBtn" disabled>
+                <i class="fas fa-exchange-alt"></i> Convert to Word
+            </button>
+
+            <div class="result-container" id="resultContainer">
+                <div class="result-item">
+                    <div class="result-details">
+                        <i class="fas fa-file-word"></i>
+                        <span class="result-name" id="resultFilename">converted_document.docx</span>
+                    </div>
+                    <a href="#" class="btn btn-download" id="downloadBtn">
+                        <i class="fas fa-download"></i> Download
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>© 2025 AI PDF to Word Converter. All rights reserved. Made with <i class="fas fa-heart"></i> by Naim Xbz</p>
+        </div>
+    </footer>
+
+    <script src="scripts/script.js"></script>
+</body>
+</html>
